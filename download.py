@@ -8,6 +8,5 @@ os.makedirs("data", exist_ok=True)
 
 df = pd.read_csv("data.csv")
 
-for url, path in tqdm(zip(df['url'].tolist(), df['name'].tolist())):
-    print(url)
-    urllib.request.urlretrieve(url, Path('data') / path)
+for url, path in tqdm(zip(df["url"].tolist(), df["name"].tolist())):
+    urllib.request.urlretrieve(url, Path("data") / path)
